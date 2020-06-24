@@ -9,7 +9,8 @@
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/styles.css" </head>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
 
 <body>
     <nav class="navbar navbar-dark bg-primary" id="theNav">
@@ -33,12 +34,44 @@
             </div>
             <div class="col-8 bg-dark">
                 <div class="row sub-row">
-                    <div class="col-12 border border-light">
+                    <div class="col-12 border border-light rounded">
                         <div class="row sub2row">
                             <span class="cityN" id="cityN"></span>
                             <img id="thisPhoto" src="placeholder" alt="">
                         </div>
+                        <div class="row sub2row">
+                            <div class="col-12">
+                                <h6 id="temp"></h6>
+                            </div>
+                        </div>
+                        <div class="row sub2row">
+                            <div class="col-12">
+                                <h6 id="humid"></h6>
+                            </div>
+                        </div>
+                        <div class="row sub2row">
+                            <div class="col-12">
+                                <h6 id="wind"></h6>
+                            </div>
+                        </div>
+                        <div class="row sub2row">
+                            <div class="col-12">
+                                <h6 id="UVI"></h6>
+                            </div>
+                        </div>
                     </div>
+                </div>
+                <div class="row sub-row">
+                    <div class="col-12">
+                        <h4 id="forecast">Weekly Forecast</h4>
+                    </div>
+                </div>
+                <div class="row sub-row">
+                    <div class="col rounded text-black" style="background-color: red" id="MON"></div>
+                    <div class="col rounded text-black" style="background-color:orange" id="TUE"></div>
+                    <div class="col rounded text-black" style="background-color:yellow" id="WED"></div>
+                    <div class="col rounded text-white" style="background-color:green" id="THU"></div>
+                    <div class="col rounded text-white" style="background-color:blue" id="FRI"></div>
                 </div>
             </div>
         </div>
