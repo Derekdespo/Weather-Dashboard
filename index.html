@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Weather</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/styles.css" </head>
+
+<body>
+    <nav class="navbar navbar-dark bg-primary" id="theNav">
+        <span class="navbar-brand mb-0 h1" id="header">The Weather Dash</span>
+    </nav>
+    <br>
+    <aside class="container">
+        <div class="row">
+            <div class="col-4 bg-light">
+                <h5 id="searchLabel">Choose Your Destination:</h5>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="yourCity" placeholder="City Name">
+                    <div class="input-group-append">
+                        <button class="btn btn-info" type="button" id="searchBtn">
+                            <i class="fas fa-globe-americas"></i>
+                        </button>
+                    </div>
+                </div>
+                <button class="btn btn-warning mb-3" type="button" id="clearSearch">Clear Search</button>
+                <form id="history"></form>
+            </div>
+        </div>
+    </aside>
+</body>
+
+</html>
