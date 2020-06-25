@@ -132,6 +132,7 @@ function initialize() {
             // variable for the input value
             
             selectedCity(inputCityEl.val());
+            console.log(inputCityEl.val());
         })
 }
 initialize();
