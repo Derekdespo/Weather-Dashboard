@@ -5,3 +5,8 @@ body {
     text-align: center;
     justify-content: center;
 }
+
+#forecast, h4 {
+    text-decoration-color: aliceblue;
+    color: aliceblue;
+}

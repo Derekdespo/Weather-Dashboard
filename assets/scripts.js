@@ -2,25 +2,25 @@
 function initialize() {
     // Establish variables that will hook elements from the HTML file
     // Hook to yourCity id an the input element
-    const inputCityEl = document.getElementById("#yourCity");
+    const inputCityEl = document.getElementById("yourCity");
     // Hook to the search button id searchBtn
-    const searchButtonEl = document.getElementById("#searchBtn");
+    const searchButtonEl = document.getElementById("searchBtn");
     // Hook to the button that will serve to clear through id clearSearch
-    const clearButtonEl = document.getElementById("#clearSearch");
+    const clearButtonEl = document.getElementById("clearSearch");
     // Hook to the element that will hold the inputted city name with id cityN
-    const cityNamEl = document.getElementById("#cityN");
+    const cityNamEl = document.getElementById("cityN");
     // Hook to the corresponding img that goes with the name using id thisPhoto
-    const thisPhotoEl = document.getElementById("#thisPhoto");
+    const thisPhotoEl = document.getElementById("thisPhoto");
     // Hook to the h6 tag for temperature using id temp
-    const tempEl = document.getElementById("#temp");
+    const tempEl = document.getElementById("temp");
     // Hook to h6 tag representing humidity using id humid
-    const humidityEl = document.getElementById("#humid");
+    const humidityEl = document.getElementById("humid");
     // Hook to the h6 tag the represents wind mph using id wind
-    const windEl = document.getElementById("#wind");
+    const windEl = document.getElementById("wind");
     // Hook into the h6 tag representing the uv index using id UVI
-    const UVIEl = document.getElementById("#UVI");
+    const UVIEl = document.getElementById("UVI");
     // Hook into the form element with id history
-    const historyFormEl = document.getElementById("#history");
+    const historyFormEl = document.getElementById("history");
 
     // Creating a variable for the key since we may need to use it more than once and typing it all out is long and annoying
     const key = "5ea9f8741d3c23988ae50f314b36e9e8";
@@ -29,7 +29,10 @@ function initialize() {
     function selectedCity(cityName) {
         // need to run ajax method in order to pull from the weather data-base
         var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + key;
-        ajax.get(queryURL)
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+        })
             .then(function (response) {
                 console.log(response);
                 // Need to get the date so that it can display next to the city name on the page
@@ -62,7 +65,10 @@ function initialize() {
                 // now set up the uv index using lat and lon
                 var uvQuery = "https://api.openweathermap.org/data/2.5/uvi/forecast?lat=" + latitude + "&lon=" + longitude + "&appid=" + key + "&cnt=1";
                 // ajax call
-                ajax.get(uvQuery)
+                $.ajax({
+                    url: uvQuery,
+                    method: "GET"
+                })
                     .then(function (response) {
                         // creates the element that will store the index results
                         var uv = $("<span>");
@@ -80,7 +86,10 @@ function initialize() {
                     var thisCity = response.data.id;
                     var forecastQuery = "https://api.openweathermap.org/data/2.5/forecast?id=" + thisCity + "&appid=" + key;
                     // ajax call
-                    ajax.get(forecastQuery)
+                    $.ajax({
+                        url: forecastQuery,
+                        method: "GET"
+                    })
                     .then(function(response) {
                         console.log(response);
                         // a variable that ties into all forecast boxes
@@ -119,10 +128,10 @@ function initialize() {
     }
 
         // add a click event to the searchBtn
-        searchButtonEl.on("click", function() {
+        searchButtonEl.addEventListener("click", function() {
             // variable for the input value
-            const yourText = inputCityEl.val();
-            selectedCity(yourText);
+            
+            selectedCity(inputCityEl.val());
         })
 }
 initialize();
