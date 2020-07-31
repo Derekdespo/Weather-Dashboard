@@ -1,7 +1,8 @@
 # Weather-Dashboard
-For the weather dashboard the idea was to be able to input a city and get the current weather as well as a five day forecast
-This project dealt with many calls to the open weather api.
-It also dealth with creating some dynamic elements as well as hooking into existing ones.
-This was a challenging porject because even though I felt like I was thorough with my Js file, it fell short in terms of functionality.
-This project incorporated javascript jquery html and css. 
-Although, this project isn't currently functional I will continue to debug until I can resovlve the issues
+
+## Description
+This application will allow you to check the weather by location. You can also receive a five day forecast for the area of your choice.
+
+## Utilization 
+This application uses HTML5, CSS3, and Javascript as well as a connection with Open Weather Map Api.
+
